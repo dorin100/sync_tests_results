@@ -1,3 +1,4 @@
+import os
 import sqlite3
 from sqlite3 import Error
 from pathlib import Path
@@ -92,6 +93,7 @@ def main():
 
     current_directory = Path.cwd()
     print(f"current_directory: {current_directory}")
+    print(f" - listdir current_directory: {os.listdir(current_directory)}")
 
     # sync_test_clean_state.py is creating the "sync_results.log" file that has the test values
     # to be added into the db
