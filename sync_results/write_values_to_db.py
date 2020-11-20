@@ -23,7 +23,7 @@ def create_connection(db_file):
 def add_test_values_into_db(env, test_values):
     print(f"Write values into {env} table")
     current_directory = Path.cwd()
-    database_path = Path(current_directory) / "sync_tests" / database_name
+    database_path = Path(current_directory) / "sync_results" / database_name
     print(f"database_path: {database_path}")
 
     conn = create_connection(database_path)
@@ -56,8 +56,8 @@ def add_test_values_into_db(env, test_values):
 def export_db_tables_to_csv(env):
     print(f"Export {env} table into CSV file")
     current_directory = Path.cwd()
-    database_path = Path(current_directory) / "sync_tests" / database_name
-    csv_files_path = Path(current_directory) / "sync_tests" / "csv_files"
+    database_path = Path(current_directory) / "sync_results" / database_name
+    csv_files_path = Path(current_directory) / "sync_results" / "csv_files"
     print(f"database_path : {database_path}")
     print(f"csv_files_path: {csv_files_path}")
 
