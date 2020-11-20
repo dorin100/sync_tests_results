@@ -78,7 +78,7 @@ def export_db_tables_to_csv(env):
         conn.commit()
         cur.close()
 
-        print(f"Data exported Successfully into {csv_files_path / f'{env}.csv'}")
+        print(f"Data exported Successfully to: {csv_files_path / f'{env}.csv'}")
     except sqlite3.Error as error:
         print(f"!!! ERROR: Failed to insert data into {env} table:\n", error)
         return False
