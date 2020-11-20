@@ -97,7 +97,7 @@ def main():
 
     # sync_test_clean_state.py is creating the "sync_results.log" file that has the test values
     # to be added into the db
-    with open(current_directory / results_file_name, "r+") as file:
+    with open(current_directory / "sync_results" / results_file_name, "r+") as file:
         file_values = file.read()
         print(f"file_values: {file_values}")
 
